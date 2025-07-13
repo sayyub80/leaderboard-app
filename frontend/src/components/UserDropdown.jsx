@@ -16,7 +16,7 @@ export default function UserDropdown({ onSelectUser, onAddUser }) {
 
   const handleAddUser = async () => {
     if (!newUserName.trim()) return;
-    await axios.post("http://localhost:5000/api/users", { name: newUserName });
+    await axios.post("https://leaderboard-app-woad.vercel.app/api/users", { name: newUserName });
     setNewUserName("");
     fetchUsers();
   };
