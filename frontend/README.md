@@ -1,12 +1,99 @@
-# React + Vite
+Leaderboard App - Full Stack (React + Node.js + MongoDB)
+A real-time leaderboard application that:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tracks user points
 
-Currently, two official plugins are available:
+Displays top 10 rankings
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Allows adding new users
 
-## Expanding the ESLint configuration
+Stores all data in MongoDB
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌐 Live Demo
+Frontend: https://leader-task.netlify.app
+
+Backend: https://leaderboard-app-woad.vercel.app
+
+✨ Features
+✅ User Management
+
+Add new users via form
+
+Select existing users from dropdown
+
+✅ Points System
+
+Claim random points (1-10) per user
+
+Persistent point history tracking
+
+✅ Real-time Leaderboard
+
+Displays top 10 users by points
+
+Auto-updates when points are claimed
+
+✅ Modern UI
+
+Built with React + Tailwind CSS
+
+Fully responsive design
+
+🛠 Tech Stack
+Frontend
+
+React (Vite)
+
+Tailwind CSS
+
+Axios for API calls
+
+Backend
+
+Node.js
+
+Express
+
+MongoDB (Atlas)
+
+CORS configured for secure access
+
+🚀 Deployment
+Frontend
+
+Hosted on Netlify
+
+Environment variables for API URL
+
+Backend
+
+Hosted on Vercel
+
+MongoDB Atlas cloud database
+
+🔧 Installation (Local Development)
+Clone the repo
+
+bash
+git clone https://github.com/yourusername/leaderboard-app.git
+cd leaderboard-app
+Backend Setup
+
+bash
+cd backend
+npm install
+echo "MONGO_URI=your_mongodb_connection_string" > .env
+npm start
+Frontend Setup
+
+bash
+cd frontend
+npm install
+echo "VITE_API_URL=http://localhost:5000" > .env
+npm run dev
+📝 Notes
+Requires Node.js v16+
+
+MongoDB Atlas free tier works perfectly
+
+All API endpoints documented in backend/routes/
