@@ -5,7 +5,7 @@ export default function Leaderboard() {
   const [users, setUsers] = useState([]);
 
  const fetchUsers = async () => {
-  const res = await axios.get("http://localhost:5000/api/users/top"); // Fetch top 10
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/top`); // Fetch top 10
   setUsers(res.data);
 };
 

@@ -10,7 +10,7 @@ export default function UserDropdown({ onSelectUser, onAddUser }) {
   }, []);
 
   const fetchUsers = async () => {
-  const res = await axios.get("http://localhost:5000/api/users/all"); // Fetch all users
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/all`); // Fetch all users
   setUsers(res.data);
 };
 
