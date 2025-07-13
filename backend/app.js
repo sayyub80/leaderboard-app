@@ -10,12 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-
 app.use(
   cors({
-    origin: "https://leader-task.netlify.app/", //frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-    credentials: true, // Allow cookies (if needed)
+    origin: "https://leader-task.netlify.app",  // ✅ Fixed: No trailing slash
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 app.use(express.json());
@@ -25,7 +24,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/claims", claimRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the Leaderboard API!");  
+  res.send("Welcome to the Leaderboard API!");
 });
 
 // Start server
